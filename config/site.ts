@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + NextUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "AFT GROUP Sarl — Professional Web & Branding Solutions",
+  description: "Build your brand. Boost your sales. Grow with confidence.",
   navItems: [
     {
       label: "Home",
