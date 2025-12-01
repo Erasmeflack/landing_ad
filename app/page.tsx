@@ -26,13 +26,18 @@ export default function Home() {
         </h1>
         <br />
         <h1 className={title({ size: "lg" })}>& un </h1>
-        <h1 className={title({ color: "violet", size: "lg" })}>
-          Branding
+        <h1 className={title({ color: "violet", size: "lg" })}>Branding</h1>
+        <h1 className={title({ size: "lg" })}>
+          {" "}
+          Qui Font Grandir Votre Entreprise
         </h1>
-        <h1 className={title({ size: "lg" })}> Qui Font Grandir Votre Entreprise</h1>
-        <h2 className="font-normal text-gray-500 py-10">Nous créons des logos modernes, des interfaces élégantes et des sites web performants qui transforment vos visiteurs en clients.</h2>
+        <h2 className="font-normal text-gray-500 py-10">
+          Nous créons des logos modernes, des interfaces élégantes et des sites
+          web performants qui transforment vos visiteurs en clients.
+        </h2>
         <h2 className="font-normal text-gray-500 py-2">
-          Construisez votre image. Boostez vos ventes. Développez votre activité.
+          Construisez votre image. Boostez vos ventes. Développez votre
+          activité.
         </h2>
       </div>
 
@@ -57,7 +62,7 @@ export default function Home() {
           Réserver une Consultation de 30 min
         </Link>
       </div>
-      <div className="mt-20 lg:mt-60 flex-col justify-center items-center mx-auto">
+      <div className="mt-20 lg:mt-30 flex-col justify-center items-center mx-auto">
         <h1 className="text-2xl lg:text-4xl font-semibold flex- justify-center items-center mx-auto text-center">
           Vos Clients Sont en Ligne&nbsp;
         </h1>
