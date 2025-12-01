@@ -73,7 +73,6 @@ export default function Home() {
           Une présence en ligne faible vous fait perdre des clients chaque jour.
         </h2>
         <Problem />
-        <FeaturesBento />
       </div>
       <LightBg />
       <Integrations />
