@@ -69,9 +69,6 @@ export default function Home() {
         <h1 className="text-2xl lg:text-4xl font-semibold flex- justify-center items-center mx-auto text-center">
           Mais Votre Présence Digitale Travaille Contre Vous
         </h1>
-        <h2 className="text-2xl font-normal text-gray-500 py-4 justify-center items-center mx-auto text-center">
-          Une présence en ligne faible vous fait perdre des clients chaque jour.
-        </h2>
         <Problem />
       </div>
       <LightBg />

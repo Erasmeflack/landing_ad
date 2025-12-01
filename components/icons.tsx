@@ -2,6 +2,48 @@ import * as React from "react";
 
 import { IconSvgProps } from "@/types";
 
+export const DangerCircleIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    fill="none"
+    height={size || height}
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path
+      fill="currentColor"
+      fillRule="evenodd"
+      d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1 13v2h2v-2h-2zm0-8v6h2V7h-2z"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+
+export const WarningTriangleIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    fill="none"
+    height={size || height}
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path
+      fill="currentColor"
+      d="M12 5.99L19.53 19H4.47L12 5.99zM12 2L1 21h22L12 2zm1 14h-2v2h2v-2zm0-6h-2v4h2v-4z"
+    />
+  </svg>
+);
+
 export const Logo: React.FC<IconSvgProps> = ({
   size = 36,
   width,
