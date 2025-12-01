@@ -41,7 +41,7 @@ export default function Home() {
         </h2>
       </div>
 
-      <div className="flex gap-3">
+      <div className="flex flex-col sm:flex-row gap-3">
         <Link
           isExternal
           className={buttonStyles({
