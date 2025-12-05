@@ -60,11 +60,6 @@ export default function Process() {
                   </p>
                 </CardBody>
               </Card>
-              
-              {/* Timeline dot */}
-              <div className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-                            w-6 h-6 rounded-full bg-gradient-to-br from-[#FF1CF7] to-[#b249f8] 
-                            border-4 border-background z-20"></div>
             </div>
           ))}
         </div>
