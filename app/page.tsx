@@ -49,7 +49,7 @@ export default function Home() {
             radius: "full",
             variant: "shadow",
           })}
-          href={siteConfig.links.docs}
+          href={siteConfig.links.form}
         >
           Obtenir un Devis Gratuit
         </Link>
@@ -70,8 +70,9 @@ export default function Home() {
           Mais Votre Présence Digitale Travaille Contre Vous
         </h1>
         <Problem />
+        <Solution />
+
       </div>
-      <Solution />
       <Integrations />
       <LastButNotLeast />
     </section>

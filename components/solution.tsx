@@ -1,5 +1,8 @@
 "use client";
 import { Chip, Card, CardHeader, CardBody } from "@nextui-org/react";
+import { Link } from "@nextui-org/link";
+import { button as buttonStyles } from "@nextui-org/theme";
+import { siteConfig } from "@/config/site";
 import React from "react";
 import { PaletteIcon, DesignIcon, CodeIcon } from "@/components/icons";
 
@@ -111,6 +114,19 @@ function Solution() {
                           opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
           </Card>
         ))}
+      </div>
+      <div className="flex flex-col sm:flex-row gap-3 justify-center py-10">
+        <Link
+          isExternal
+          className={buttonStyles({
+            color: "primary",
+            radius: "full",
+            variant: "shadow",
+          })}
+          href={siteConfig.links.form}
+        >
+          Lancez Votre Projet Aujourd&apos;hui
+        </Link>
       </div>
     </div>     
   );

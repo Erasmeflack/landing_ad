@@ -42,7 +42,7 @@ export const siteConfig = {
   links: {
     github: "https://github.com/DarkInventor",
     twitter: "https://twitter.com/kathanmehtaa",
-    docs: "#",//TODO
+    form: "#",//TODO
     discord: "#",
     sponsor: "#",
   },
