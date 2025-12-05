@@ -33,43 +33,37 @@ export default function Process() {
         A Clear, Stress-Free 4-Step Workflow
       </h2>
       
-      {/* Timeline style */}
-      <div className="relative">
-        {/* Main timeline line */}
-        <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary/30 to-transparent transform -translate-y-1/2"></div>
-        
-        {/* Steps in a single row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 relative">
-          {steps.map((step, index) => (
-            <div key={index} className="relative z-10">
-              <Card className="border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8] 
-                             transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-white/10
-                             group cursor-pointer">
-                <CardBody className="text-center p-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#FF1CF7] to-[#b249f8] text-white rounded-full 
-                                flex items-center justify-center text-2xl font-bold mx-auto mb-4
-                                transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
-                    {step.number}
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 transition-all duration-300 group-hover:text-primary">
-                    {step.title}
-                  </h3>
-                  <p className="text-default-600 transition-all duration-300 group-hover:text-default-700">
-                    {step.description}
-                  </p>
-                </CardBody>
-              </Card>
-              
-              {/* Timeline dot */}
-              <div className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-                            w-6 h-6 rounded-full bg-gradient-to-br from-[#FF1CF7] to-[#b249f8] 
-                            border-4 border-background z-20"></div>
-            </div>
-          ))}
-        </div>
+      {/* Single row grid for desktop, stacked on mobile */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
+        {steps.map((step, index) => (
+          <div key={index} className="relative">
+            {/* Step card */}
+            <Card className="border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8] h-full">
+              <CardBody className="text-center p-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#FF1CF7] to-[#b249f8] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                  {step.number}
+                </div>
+                <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+                <p className="text-default-600">{step.description}</p>
+              </CardBody>
+            </Card>
+            
+            {/* Connector line between steps (desktop only) */}
+            {index < steps.length - 1 && (
+              <>
+                {/* Mobile connector (vertical) */}
+                <div className="md:hidden absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-0.5 h-6 bg-gradient-to-b from-primary to-transparent"></div>
+                
+                {/* Desktop connector (horizontal) */}
+                <div className="hidden lg:block absolute top-1/2 -right-2 transform -translate-y-1/2 w-4 h-0.5 bg-gradient-to-r from-primary to-transparent"></div>
+                <div className="hidden lg:block absolute top-1/2 right-0 transform -translate-y-1/2 w-2 h-2 rounded-full bg-primary"></div>
+              </>
+            )}
+          </div>
+        ))}
       </div>
       
-      <p className="text-2xl font-normal text-default-500 py-10 text-center mt-8">
+      <p className="text-2xl font-normal text-default-500 py-10 text-center">
         Simple. Transparent. Professional.
       </p>
     </div>
