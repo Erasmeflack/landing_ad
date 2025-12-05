@@ -11,7 +11,7 @@ import TrustedBy from "@/components/trusted";
 import PrototypeImg from "@/components/prototype-img";
 import FeaturesBento from "@/components/feature-bento";
 import Problem from "@/components/problem";
-import LightBg from "@/components/light-bg";
+import Solution from "@/components/solution";
 import Integrations from "@/components/integrations";
 import { LastButNotLeast } from "@/components/last-but-not-least";
 
@@ -71,7 +71,7 @@ export default function Home() {
         </h1>
         <Problem />
       </div>
-      <LightBg />
+      <Solution />
       <Integrations />
       <LastButNotLeast />
     </section>

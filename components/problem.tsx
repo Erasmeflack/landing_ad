@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import { WarningTriangleIcon } from "@/components/icons"; // Adjust import path as needed
+import { WarningTriangleIcon } from "@/components/icons";
 
 export default function Problem() {
   return (
     <div className="flex justify-center w-full">
-      <div className="max-w-2xl mx-auto px-6">
+      <div className="max-w-full mx-auto px-1">
         <h2 className="text-2xl font-normal text-gray-500 py-4 text-left">
           Une présence en ligne faible vous fait perdre des clients chaque jour.
         </h2>
@@ -53,8 +53,8 @@ export default function Problem() {
             </span>
           </li>
         </ul>
-        <h2 className="text-2xl font-normal text-gray-500 py-10 text-left">
-          Votre entreprise mérite mieux — et vos clients aussi.
+        <h2 className="text-2xl font-normal text-gray-500 py-10 text-center">
+          Votre entreprise mérite mieux, vos clients aussi.
         </h2>
       </div>
     </div>

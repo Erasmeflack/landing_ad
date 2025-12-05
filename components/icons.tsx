@@ -2,6 +2,96 @@ import * as React from "react";
 
 import { IconSvgProps } from "@/types";
 
+export const PaletteIcon = (props: any) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    focusable="false"
+    height="1em"
+    role="presentation"
+    viewBox="0 0 24 24"
+    width="1em"
+    {...props}
+  >
+    <path
+      d="M8 5V3H3V8H5V19C5 20.1 5.9 21 7 21H17C18.1 21 19 20.1 19 19V8H21V3H16V5H8ZM17 19H7V8H17V19ZM9 10C8.45 10 8 10.45 8 11C8 11.55 8.45 12 9 12C9.55 12 10 11.55 10 11C10 10.45 9.55 10 9 10ZM15 10C14.45 10 14 10.45 14 11C14 11.55 14.45 12 15 12C15.55 12 16 11.55 16 11C16 10.45 15.55 10 15 10Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+export const DesignIcon = (props: any) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    focusable="false"
+    height="1em"
+    role="presentation"
+    viewBox="0 0 24 24"
+    width="1em"
+    {...props}
+  >
+    <path
+      d="M20.71 7.04C21.1 6.65 21.1 6 20.71 5.63L18.37 3.29C18 2.9 17.35 2.9 16.96 3.29L15.12 5.12L18.87 8.87L20.71 7.04ZM3 17.25V21H6.75L17.81 9.93L14.06 6.18L3 17.25Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+export const CodeIcon = (props: any) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    focusable="false"
+    height="1em"
+    role="presentation"
+    viewBox="0 0 24 24"
+    width="1em"
+    {...props}
+  >
+    <path
+      d="M8.7 15.9L4.8 12L8.7 8.1C9.08 7.72 9.08 7.09 8.7 6.71C8.31 6.32 7.68 6.32 7.29 6.71L2.7 11.3C2.31 11.69 2.31 12.32 2.7 12.71L7.29 17.3C7.68 17.69 8.31 17.69 8.7 17.3C9.09 16.91 9.08 16.27 8.7 15.9ZM15.3 15.9L19.2 12L15.3 8.1C14.92 7.72 14.92 7.09 15.3 6.71C15.69 6.32 16.32 6.32 16.71 6.71L21.3 11.3C21.69 11.69 21.69 12.32 21.3 12.71L16.71 17.3C16.32 17.69 15.69 17.69 15.3 17.3C14.91 16.91 14.92 16.27 15.3 15.9Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+export const RocketIcon = (props: any) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    focusable="false"
+    height="1em"
+    role="presentation"
+    viewBox="0 0 24 24"
+    width="1em"
+    {...props}
+  >
+    <path
+      d="M13.13 22.19L11.5 18.36C13.07 17.78 14.54 17 15.9 16.09L13.13 22.19ZM5.64 12.5L1.81 10.87L7.91 8.1C7 9.46 6.22 10.93 5.64 12.5ZM21.61 2.39C21.61 2.39 16.66 7.34 15.08 8.92C14.49 9.51 14.49 10.48 15.08 11.07L15.73 11.72C15.87 11.86 15.87 12.09 15.73 12.23L11.77 16.19C11.63 16.33 11.4 16.33 11.26 16.19L10.61 15.54C10.02 14.95 9.05 14.95 8.46 15.54C6.88 17.12 2.39 22.61 2.39 22.61C2.39 22.61 7.34 17.66 8.92 16.08C9.51 15.49 10.48 15.49 11.07 16.08L11.72 16.73C11.86 16.87 12.09 16.87 12.23 16.73L16.19 12.77C16.33 12.63 16.33 12.4 16.19 12.26L15.54 11.61C14.95 11.02 14.95 10.05 15.54 9.46C17.12 7.88 22.61 2.39 22.61 2.39C22.61 2.39 22.61 2.39 21.61 2.39Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+export const SupportIcon = (props: any) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    focusable="false"
+    height="1em"
+    role="presentation"
+    viewBox="0 0 24 24"
+    width="1em"
+    {...props}
+  >
+    <path
+      d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 19H11V17H13V19ZM15.07 11.25L14.17 12.17C13.45 12.9 13 13.5 13 15H11V14.5C11 13.4 11.45 12.4 12.17 11.67L13.41 10.41C13.78 10.05 14 9.55 14 9C14 7.9 13.1 7 12 7C10.9 7 10 7.9 10 9H8C8 6.79 9.79 5 12 5C14.21 5 16 6.79 16 9C16 9.88 15.64 10.68 15.07 11.25Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
 export const DangerCircleIcon: React.FC<IconSvgProps> = ({
   size = 24,
   width,
