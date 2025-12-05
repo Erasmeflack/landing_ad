@@ -92,21 +92,6 @@ function Solution() {
                   </li>
                 ))}
               </ul>
-              
-              {/* Optional: Add a subtle call-to-action that appears on hover */}
-              <div className="mt-4 pt-4 border-t border-default-200 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <span className="text-xs text-primary font-medium flex items-center gap-1">
-                  En savoir plus
-                  <svg 
-                    className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </div>
             </CardBody>
             
             {/* Optional: Gradient border effect on hover */}

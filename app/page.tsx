@@ -5,8 +5,8 @@ import { button as buttonStyles } from "@nextui-org/theme";
 
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
 import Badge from "@/components/chip";
+import Process from "@/components/process";
 import TrustedBy from "@/components/trusted";
 import PrototypeImg from "@/components/prototype-img";
 import FeaturesBento from "@/components/feature-bento";
@@ -70,9 +70,11 @@ export default function Home() {
           Mais Votre Présence Digitale Travaille Contre Vous
         </h1>
         <Problem />
-        <Solution />
-
       </div>
+      <Solution />
+
+      <Process />
+
       <Integrations />
       <LastButNotLeast />
     </section>
