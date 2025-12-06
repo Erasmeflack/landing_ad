@@ -16,6 +16,9 @@ import Portfolio from "@/components/portfolio";
 import Testiminials from "@/components/testimonials"
 import { LastButNotLeast } from "@/components/last-but-not-least";
 import Testimonials from "@/components/testimonials";
+import Pricing from "@/components/pricing";
+import ContactUs from "@/components/contact-form";
+
 
 export default function Home() {
   return (
@@ -78,7 +81,8 @@ export default function Home() {
 
       <Portfolio />
       <Testimonials />
-      <LastButNotLeast />
+      <Pricing />
+      <ContactUs />
     </section>
   );
 }
