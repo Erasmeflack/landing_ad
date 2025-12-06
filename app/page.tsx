@@ -13,7 +13,9 @@ import FeaturesBento from "@/components/feature-bento";
 import Problem from "@/components/problem";
 import Solution from "@/components/solution";
 import Portfolio from "@/components/portfolio";
+import Testiminials from "@/components/testimonials"
 import { LastButNotLeast } from "@/components/last-but-not-least";
+import Testimonials from "@/components/testimonials";
 
 export default function Home() {
   return (
@@ -72,10 +74,10 @@ export default function Home() {
         <Problem />
       </div>
       <Solution />
-
       <Process />
 
       <Portfolio />
+      <Testimonials />
       <LastButNotLeast />
     </section>
   );
