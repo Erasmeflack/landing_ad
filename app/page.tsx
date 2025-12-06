@@ -12,7 +12,7 @@ import PrototypeImg from "@/components/prototype-img";
 import FeaturesBento from "@/components/feature-bento";
 import Problem from "@/components/problem";
 import Solution from "@/components/solution";
-import Integrations from "@/components/integrations";
+import Portfolio from "@/components/portfolio";
 import { LastButNotLeast } from "@/components/last-but-not-least";
 
 export default function Home() {
@@ -75,7 +75,7 @@ export default function Home() {
 
       <Process />
 
-      <Integrations />
+      <Portfolio />
       <LastButNotLeast />
     </section>
   );

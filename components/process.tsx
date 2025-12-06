@@ -31,7 +31,7 @@ export default function Process() {
   return (
     <div className="container mx-auto px-6 py-20">
       <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
-        A Clear, Stress-Free 4-Step Workflow
+        Une Méthode Simple, Transparente & Professionnelle
       </h2>
       
       {/* Timeline style */}
@@ -66,7 +66,7 @@ export default function Process() {
       </div>
       
       <p className="text-2xl font-normal text-default-500 py-10 text-center mt-8">
-        Simple. Transparent. Professional.
+        Clair. Rapide. Sans stress.
       </p>
     </div>
   );
