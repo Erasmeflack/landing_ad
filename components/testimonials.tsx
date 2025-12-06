@@ -11,21 +11,21 @@ export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      quote: "“AFT GROUP s'investit dans les projets de chacun cherchant à chaque fois à créer un projet qui se démarque et qui a pour objectif principal d'apporter une réelle plus-value.“",
+      quote: "AFT GROUP s'investit dans les projets de chacun cherchant à chaque fois à créer un projet qui se démarque et qui a pour objectif principal d'apporter une réelle plus-value.",
       author: "Vĩctõire FD",
       role: "Startup Owner",
       rating: 5
     },
     {
       id: 2,
-      quote: "“La conception UI/UX correspondait exactement à ce dont nous avions besoin. Nos utilisateurs adorent cette nouvelle expérience et leur engagement a immédiatement augmenté.”",
+      quote: "La conception UI/UX correspondait exactement à ce dont nous avions besoin. Nos utilisateurs adorent cette nouvelle expérience et leur engagement a immédiatement augmenté.",
       author: "Virginie Fauquinon", 
       role: "Startup Founder",
       rating: 5
     },
     {
       id: 3,
-      quote: "“Leur équipe a transformé notre présence en ligne. Notre nouveau site web est moderne, rapide et génère trois fois plus de prospects qu'avant.”",
+      quote: "Leur équipe a transformé notre présence en ligne. Notre nouveau site web est moderne, rapide et génère trois fois plus de prospects qu'avant.",
       author: "Sarah Martin",
       role: "Business Owner",
       rating: 5
@@ -40,7 +40,7 @@ export default function Testimonials() {
             What Our Clients Say
           </h1>
           <p className="text-lg text-default-600 max-w-2xl mx-auto">
-            Ils nous font confiance. Découvrez leurs retours d'expérience.
+            Ils nous font confiance. Découvrez leurs retours d&apos;expérience.
           </p>
         </div>
 
