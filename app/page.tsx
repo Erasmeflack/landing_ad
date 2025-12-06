@@ -7,14 +7,9 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import Badge from "@/components/chip";
 import Process from "@/components/process";
-import TrustedBy from "@/components/trusted";
-import PrototypeImg from "@/components/prototype-img";
-import FeaturesBento from "@/components/feature-bento";
 import Problem from "@/components/problem";
 import Solution from "@/components/solution";
 import Portfolio from "@/components/portfolio";
-import Testiminials from "@/components/testimonials"
-import { LastButNotLeast } from "@/components/last-but-not-least";
 import Testimonials from "@/components/testimonials";
 import Pricing from "@/components/pricing";
 import ContactUs from "@/components/contact-form";
