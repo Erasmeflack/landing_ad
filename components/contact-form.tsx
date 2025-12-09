@@ -15,6 +15,43 @@ import {
 import { PhoneIcon, WhatsAppIcon, MailIcon, SendIcon, MapPinIcon, ClockIcon } from "@/components/icons";
 
 export default function ContactUs() {
+  // Contact information
+  const contactInfo = {
+    phone: "+33123456789", // Replace with your actual phone number
+    whatsapp: "+33123456789", // Replace with your actual WhatsApp number
+    email: "contact@aftgroup.org", // Replace with your actual email
+    businessName: "AFT GROUP Sarl"
+  };
+
+  // WhatsApp message template
+  const whatsappMessage = encodeURIComponent(
+    `Bonjour AFT GROUP,\n\nJe suis intéressé(e) par vos services de développement web et branding. \n\nPouvez-vous m'en dire plus sur :\n- Vos disponibilités pour une consultation\n- Votre processus de travail\n- Les tarifs pour un projet similaire\n\nMerci !`
+  );
+
+  // Email template
+  const emailSubject = encodeURIComponent("Demande de renseignements - AFT GROUP");
+  const emailBody = encodeURIComponent(
+    `Bonjour l'équipe AFT GROUP,\n\nJe souhaiterais obtenir plus d'informations sur vos services.\n\nVoici quelques détails sur mon projet :\n\n[Merci de décrire votre projet ici]\n\nCordialement,\n`
+  );
+
+  // Handle button clicks
+  const handleWhatsAppClick = () => {
+    window.open(`https://wa.me/${contactInfo.whatsapp}?text=${whatsappMessage}`, '_blank');
+  };
+
+  const handlePhoneClick = () => {
+    window.location.href = `tel:${contactInfo.phone}`;
+  };
+
+  const handleEmailClick = () => {
+    window.location.href = `mailto:${contactInfo.email}?subject=${emailSubject}&body=${emailBody}`;
+  };
+
+  const handleCallRequest = () => {
+    // This could open a modal or redirect to a call scheduling page
+    window.open('#call-schedule', '_blank');
+  };
+
   return (
     <div className="flex justify-center w-full py-20 px-4 bg-gradient-to-b from-background to-default-100">
       <div className="max-w-4xl mx-auto w-full">
@@ -28,7 +65,7 @@ export default function ContactUs() {
           </h2>
           
           <p className="text-lg text-default-600 max-w-xl mx-auto">
-            Prenez rendez-vous pour une consultation gratuite de 30 minutes ou envoyez-nous directement votre demande.
+            Prenez rendez-vous pour une consultation gratuite de 30 minutes ou contactez-nous directement.
           </p>
         </div>
 
@@ -41,28 +78,30 @@ export default function ContactUs() {
                 
                 <div className="space-y-4">
                   <Button
-                    color="success"
-                    variant="shadow"
-                    className="w-full justify-start"
+                    className="w-full justify-start bg-gradient-to-r from-green-500 to-green-600 text-white"
                     startContent={<WhatsAppIcon className="w-5 h-5" />}
+                    variant="shadow"
+                    onClick={handleWhatsAppClick}
                   >
                     WhatsApp
                   </Button>
                   
                   <Button
                     color="primary"
-                    variant="bordered"
+                    variant="shadow"
                     className="w-full justify-start"
                     startContent={<PhoneIcon className="w-5 h-5" />}
+                    onClick={handlePhoneClick}
                   >
                     Appeler
                   </Button>
                   
                   <Button
                     color="warning"
-                    variant="bordered"
+                    variant="shadow"
                     className="w-full justify-start"
                     startContent={<MailIcon className="w-5 h-5" />}
+                    onClick={handleEmailClick}
                   >
                     Email
                   </Button>
@@ -72,8 +111,9 @@ export default function ContactUs() {
                   <div className="flex items-center gap-3">
                     <ClockIcon className="w-5 h-5 text-primary" />
                     <div>
-                      <p className="font-medium">Horaires</p>
-                      <p className="text-default-500 text-sm">Lun-Ven: 9h-18h</p>
+                      <p className="font-medium">Horaires d&apos;ouverture</p>
+                      <p className="text-default-500 text-sm">Lundi - Vendredi</p>
+                      <p className="text-default-500 text-sm">9h00 - 18h00</p>
                     </div>
                   </div>
                   
@@ -82,7 +122,24 @@ export default function ContactUs() {
                     <div>
                       <p className="font-medium">Localisation</p>
                       <p className="text-default-500 text-sm">Paris, France</p>
+                      <p className="text-default-500 text-xs">Service international disponible</p>
                     </div>
+                  </div>
+                </div>
+              </CardBody>
+            </Card>
+
+            {/* Quick Stats */}
+            <Card className="border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]">
+              <CardBody className="p-4">
+                <div className="grid grid-cols-2 gap-4 text-center">
+                  <div>
+                    <div className="text-2xl font-bold text-primary">24h</div>
+                    <p className="text-default-500 text-xs">Réponse</p>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-primary">100%</div>
+                    <p className="text-default-500 text-xs">Satisfaction</p>
                   </div>
                 </div>
               </CardBody>
@@ -100,6 +157,7 @@ export default function ContactUs() {
                       label="Votre nom"
                       placeholder="John Doe"
                       variant="bordered"
+                      name="name"
                     />
                     
                     <Input
@@ -108,6 +166,7 @@ export default function ContactUs() {
                       label="Votre email"
                       placeholder="john@exemple.com"
                       variant="bordered"
+                      name="email"
                     />
                   </div>
 
@@ -115,6 +174,15 @@ export default function ContactUs() {
                     label="Entreprise"
                     placeholder="Nom de votre entreprise"
                     variant="bordered"
+                    name="company"
+                  />
+
+                  <Input
+                    label="Téléphone"
+                    placeholder="+33 1 23 45 67 89"
+                    variant="bordered"
+                    name="phone"
+                    description="Optionnel - pour vous rappeler plus rapidement"
                   />
 
                   <Select
@@ -122,20 +190,25 @@ export default function ContactUs() {
                     label="Type de projet"
                     placeholder="Sélectionnez"
                     variant="bordered"
+                    name="projectType"
                   >
                     <SelectItem key="logo" value="logo">Logo & Identité visuelle</SelectItem>
                     <SelectItem key="ui-ux" value="ui-ux">Design UI/UX</SelectItem>
                     <SelectItem key="website" value="website">Site web</SelectItem>
                     <SelectItem key="ecommerce" value="ecommerce">E-commerce</SelectItem>
-                    <SelectItem key="all" value="all">Package complet</SelectItem>
+                    <SelectItem key="branding" value="branding">Branding complet</SelectItem>
+                    <SelectItem key="consultation" value="consultation">Consultation seulement</SelectItem>
+                    <SelectItem key="other" value="other">Autre</SelectItem>
                   </Select>
 
                   <Textarea
                     isRequired
                     label="Description du projet"
-                    placeholder="Décrivez votre projet, vos objectifs et vos attentes..."
+                    placeholder="Décrivez votre projet, vos objectifs, votre budget et vos délais..."
                     variant="bordered"
                     minRows={4}
+                    name="message"
+                    description="Plus vous êtes détaillé, plus notre réponse sera précise"
                   />
 
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -150,36 +223,34 @@ export default function ContactUs() {
                     </Button>
                     
                     <Button
-                      color="default"
-                      variant="bordered"
+                      color="secondary"
+                      variant="flat"
                       className="flex-1 py-6"
+                      startContent={<PhoneIcon className="w-4 h-4" />}
+                      onClick={handleCallRequest}
                     >
-                      Demander un appel
+                      Programmer un appel
                     </Button>
                   </div>
 
                   <p className="text-default-500 text-sm text-center">
                     En soumettant ce formulaire, vous acceptez notre{' '}
-                    <Link href="#" className="text-primary">politique de confidentialité</Link>.
+                    <Link href="https://aftgroup.org/politiques" className="text-primary">politique de confidentialité</Link>.
+                    Nous ne partagerons jamais vos informations avec des tiers.
                   </p>
                 </form>
               </CardBody>
             </Card>
 
-            {/* Info Notice */}
-            <div className="mt-6 p-4 bg-primary/10 rounded-lg border border-primary/20">
-              <div className="flex items-start gap-3">
-                <div className="text-primary mt-1">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-sm text-default-700">
-                    <strong>Conseil :</strong> Plus vous détaillez votre projet, plus nous pourrons vous fournir une estimation précise et des recommandations adaptées.
-                  </p>
-                </div>
-              </div>
+            
+
+            {/* Schedule Info */}
+            <div className="mt-6 p-4 bg-default-100 rounded-lg">
+              <h4 className="font-bold mb-2">🕐 Consultation gratuite</h4>
+              <p className="text-sm text-default-600">
+                Réservez un créneau de 30 minutes pour discuter de votre projet sans engagement.
+                Nous répondons à toutes vos questions et vous proposons une solution adaptée.
+              </p>
             </div>
           </div>
         </div>
