@@ -2,70 +2,74 @@
 import { Chip, Card, CardHeader, CardBody } from "@nextui-org/react";
 import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig } from "@/config/site";
 import React from "react";
+
+import { siteConfig } from "@/config/site";
 import { PaletteIcon, DesignIcon, CodeIcon } from "@/components/icons";
 
 function Solution() {
   const services = [
     {
       title: "Logo & Identité Visuelle",
-      description: "Démarquez-vous avec une identité professionnelle, moderne et mémorable.",
+      description:
+        "Démarquez-vous avec une identité professionnelle, moderne et mémorable.",
       features: [
         "Création de Logo (Plusieurs Propositions)",
         "Palette de couleurs & typographie",
         "Charte graphique complète",
-        "Design élégant et intemporel"
+        "Design élégant et intemporel",
       ],
-      icon: <PaletteIcon />
+      icon: <PaletteIcon />,
     },
     {
       title: "UI/UX Design",
-      description: "Des designs intuitifs, centrés sur l'utilisateur et optimisés pour la conversion.",
+      description:
+        "Des designs intuitifs, centrés sur l'utilisateur et optimisés pour la conversion.",
       features: [
         "Wireframes & prototypes",
         "Design mobile-first",
         "Navigation centrée utilisateur",
-        "Interface moderne et épurée"
+        "Interface moderne et épurée",
       ],
-      icon: <DesignIcon />
+      icon: <DesignIcon />,
     },
     {
       title: "Développement Web Complet",
-      description: "Nous construisons des sites web rapides, sécurisés et évolutifs.",
+      description:
+        "Nous construisons des sites web rapides, sécurisés et évolutifs.",
       features: [
         "Développement sur mesure (WordPress/Next.js)",
         "Optimisé SEO",
         "Responsive sur tous appareils",
-        "Intégrations complètes"
+        "Intégrations complètes",
       ],
-      icon: <CodeIcon />
-    }
+      icon: <CodeIcon />,
+    },
   ];
 
   return (
     <div className="flex-col justify-center items-center mx-auto mt-10 relative text-center px-4">
       <div className="flex justify-center items-center text-center mb-2">
-        <Chip variant="flat" color="secondary">
+        <Chip color="secondary" variant="flat">
           La solution
         </Chip>
       </div>
       <h1 className="text-2xl lg:text-4xl font-semibold z-10 relative py-5">
         Nous Créons des Expériences Digitales Qui Convertissent
       </h1>
-      
+
       {/* Grid container for vertical alignment */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-8">
         {services.map((service, index) => (
-          <Card 
-            key={index} 
+          <Card
+            key={index}
+            isHoverable
+            isPressable
             className="col-span-1 border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]
                        transition-all duration-300 ease-in-out
                        hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/20
                        hover:bg-white/10 dark:hover:bg-default-400/20
                        group cursor-pointer"
-            isHoverable
-            isPressable
             onPress={() => console.log(`Selected: ${service.title}`)}
           >
             <CardHeader className="flex-col !items-start pb-0 pt-6 px-6 transition-all duration-300 group-hover:px-7">
@@ -84,8 +88,13 @@ function Solution() {
             <CardBody className="px-6 py-4 transition-all duration-300 group-hover:px-7">
               <ul className="text-default-700 text-sm text-left space-y-2">
                 {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start transition-all duration-300 group-hover:translate-x-1">
-                    <span className="text-success mr-2 mt-1 transition-all duration-300 group-hover:scale-125">✓</span>
+                  <li
+                    key={idx}
+                    className="flex items-start transition-all duration-300 group-hover:translate-x-1"
+                  >
+                    <span className="text-success mr-2 mt-1 transition-all duration-300 group-hover:scale-125">
+                      ✓
+                    </span>
                     <span className="transition-all duration-300 group-hover:text-default-900 dark:group-hover:text-default-300">
                       {feature}
                     </span>
@@ -93,10 +102,12 @@ function Solution() {
                 ))}
               </ul>
             </CardBody>
-            
+
             {/* Optional: Gradient border effect on hover */}
-            <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-transparent via-primary/5 to-transparent 
-                          opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            <div
+              className="absolute inset-0 rounded-lg bg-gradient-to-r from-transparent via-primary/5 to-transparent 
+                          opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+            />
           </Card>
         ))}
       </div>
@@ -113,7 +124,7 @@ function Solution() {
           Lancez Votre Projet Aujourd&apos;hui
         </Link>
       </div>
-    </div>     
+    </div>
   );
 }
 

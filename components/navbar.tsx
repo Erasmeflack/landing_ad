@@ -49,12 +49,15 @@ export const Navbar = () => {
 
   return (
     <NextUINavbar
-      position="sticky"
       className="dark:border-none border rounded-full max-w-[60%] flex justify-center items-center mx-auto mt-3 bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white/10"
+      position="sticky"
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/https://web.aftgroup.org">
+          <NextLink
+            className="flex justify-start items-center gap-1"
+            href="/https://web.aftgroup.org"
+          >
             <p className="font-bold text-inherit">Web & Branding</p>
           </NextLink>
         </NavbarBrand>
@@ -64,7 +67,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium"
+                  "data-[active=true]:text-primary data-[active=true]:font-medium",
                 )}
                 color="foreground"
                 href={item.href}
@@ -88,8 +91,8 @@ export const Navbar = () => {
             isExternal
             as={Link}
             className="text-sm font-normal text-default-600"
-            href={siteConfig.links.sponsor}
             color="primary"
+            href={siteConfig.links.sponsor}
             variant="light"
           >
             Obtenir un Devis
@@ -98,8 +101,8 @@ export const Navbar = () => {
             isExternal
             as={Link}
             className="text-sm font-normal text-default-600 text-white bg-blue-600"
-            href={siteConfig.links.sponsor}
             color="primary"
+            href={siteConfig.links.sponsor}
             variant="shadow"
           >
             Reserver une Consultation
@@ -108,8 +111,11 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-        </Link>
+        <Link
+          isExternal
+          aria-label="Github"
+          href={siteConfig.links.github}
+         />
         {/* <ThemeSwitch /> */}
         <NavbarMenuToggle />
       </NavbarContent>

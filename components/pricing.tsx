@@ -1,6 +1,7 @@
 "use client";
 import { Chip, Card, CardBody, Button } from "@nextui-org/react";
 import React from "react";
+
 import { CheckIcon, SparklesIcon } from "@/components/icons";
 
 function Pricing() {
@@ -17,10 +18,10 @@ function Pricing() {
         "Palette de couleurs",
         "Typographie",
         "Livraison 5-7 jours",
-        "1-2 révisions"
+        "1-2 révisions",
       ],
       cta: "Démarrer",
-      color: "default"
+      color: "default",
     },
     {
       id: 2,
@@ -34,10 +35,10 @@ function Pricing() {
         "3-4 pages",
         "SEO basique",
         "Contact form",
-        "Support 1 mois"
+        "Support 1 mois",
       ],
       cta: "Choisir ce plan",
-      color: "primary"
+      color: "primary",
     },
     {
       id: 3,
@@ -53,11 +54,11 @@ function Pricing() {
         "SEO avancé",
         "Fonctionnalités avancées",
         "Support 3 mois",
-        "Maintenance"
+        "Maintenance",
       ],
       cta: "Contacter",
-      color: "secondary"
-    }
+      color: "secondary",
+    },
   ];
 
   return (
@@ -68,45 +69,53 @@ function Pricing() {
             Tarifs Transparents
           </h1>
           <p className="text-lg text-default-600 max-w-2xl mx-auto">
-            Choisissez la formule adaptée à vos besoins. Tous nos prix incluent les révisions et le support.
+            Choisissez la formule adaptée à vos besoins. Tous nos prix incluent
+            les révisions et le support.
           </p>
         </div>
 
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {plans.map((plan) => (
-            <Card 
+            <Card
               key={plan.id}
               className={`
                 border-2 h-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl
-                ${plan.id === 2 ? 'border-primary shadow-lg' : 'border-default-200'}
-                ${plan.id === 2 ? 'md:scale-105' : ''}
+                ${plan.id === 2 ? "border-primary shadow-lg" : "border-default-200"}
+                ${plan.id === 2 ? "md:scale-105" : ""}
               `}
             >
               {plan.id === 2 && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 ">
-                  <Chip 
-                    color="primary" 
-                    variant="shadow"
+                  <Chip
+                    color="primary"
                     startContent={<SparklesIcon className="w-4 h-4" />}
+                    variant="shadow"
                   >
                     Recommandé
                   </Chip>
                 </div>
               )}
-              
+
               <CardBody className="p-6 lg:p-8">
                 {/* Plan Header */}
                 <div className="text-center mb-6">
-                  <h3 className="text-xl lg:text-2xl font-bold mb-2">{plan.title}</h3>
+                  <h3 className="text-xl lg:text-2xl font-bold mb-2">
+                    {plan.title}
+                  </h3>
                   <p className="text-default-600 mb-2">{plan.subtitle}</p>
-                  <p className="text-sm text-default-500 mb-4">{plan.description}</p>
-                  
+                  <p className="text-sm text-default-500 mb-4">
+                    {plan.description}
+                  </p>
+
                   {/* Price */}
                   <div className="mb-6">
                     <div className="text-3xl lg:text-4xl font-bold text-primary">
                       {plan.price}
-                      <span className="text-sm font-normal text-default-500"> / projet</span>
+                      <span className="text-sm font-normal text-default-500">
+                        {" "}
+                        / projet
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -124,10 +133,10 @@ function Pricing() {
                 {/* CTA */}
                 <div className="mt-auto">
                   <Button
-                    color={plan.id === 2 ? "primary" : "default"}
-                    variant={plan.id === 2 ? "shadow" : "flat"}
                     className="w-full font-bold"
+                    color={plan.id === 2 ? "primary" : "default"}
                     size="lg"
+                    variant={plan.id === 2 ? "shadow" : "flat"}
                   >
                     {plan.cta}
                   </Button>
@@ -143,14 +152,15 @@ function Pricing() {
             <CardBody className="p-8">
               <h3 className="text-2xl font-bold mb-4">Projet sur mesure ?</h3>
               <p className="text-default-600 mb-6">
-                Besoin d'une solution personnalisée qui ne correspond à aucun de ces plans ?
-                Discutons de votre projet pour créer une offre adaptée.
+                Besoin d'une solution personnalisée qui ne correspond à aucun de
+                ces plans ? Discutons de votre projet pour créer une offre
+                adaptée.
               </p>
               <Button
-                color="primary"
-                variant="shadow"
-                size="lg"
                 className="font-bold"
+                color="primary"
+                size="lg"
+                variant="shadow"
               >
                 Obtenir un devis personnalisé
               </Button>

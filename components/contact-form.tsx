@@ -1,26 +1,33 @@
 "use client";
 
 import React from "react";
-import { 
-  Card, 
-  CardBody, 
-  Input, 
-  Textarea, 
-  Select, 
-  SelectItem, 
+import {
+  Card,
+  CardBody,
+  Input,
+  Textarea,
+  Select,
+  SelectItem,
   Button,
   Chip,
-  Link
+  Link,
 } from "@nextui-org/react";
-import { PhoneIcon, WhatsAppIcon, MailIcon, SendIcon, MapPinIcon, ClockIcon } from "@/components/icons";
+import {
+  PhoneIcon,
+  WhatsAppIcon,
+  MailIcon,
+  SendIcon,
+  MapPinIcon,
+  ClockIcon,
+} from "@/components/icons";
 
 export default function ContactUs() {
   // Contact information
   const contactInfo = {
-    phone: "+33123456789", // Replace with your actual phone number
-    whatsapp: "+33123456789", // Replace with your actual WhatsApp number
-    email: "contact@aftgroup.org", // Replace with your actual email
-    businessName: "AFT GROUP Sarl"
+    phone: "+33123456789",
+    whatsapp: "+33612345678",
+    email: "contact@aftgroup.org",
+    businessName: "AFT GROUP Sarl",
   };
 
   // WhatsApp message template
@@ -36,7 +43,10 @@ export default function ContactUs() {
 
   // Handle button clicks
   const handleWhatsAppClick = () => {
-    window.open(`https://wa.me/${contactInfo.whatsapp}?text=${whatsappMessage}`, '_blank');
+    window.open(
+      `https://wa.me/${contactInfo.whatsapp}?text=${whatsappMessage}`,
+      "_blank"
+    );
   };
 
   const handlePhoneClick = () => {
@@ -48,8 +58,7 @@ export default function ContactUs() {
   };
 
   const handleCallRequest = () => {
-    // This could open a modal or redirect to a call scheduling page
-    window.open('#call-schedule', '_blank');
+    window.open("#call-schedule", "_blank");
   };
 
   return (
@@ -59,13 +68,14 @@ export default function ContactUs() {
           <Chip variant="flat" color="secondary" className="mb-4">
             Prêt à démarrer ?
           </Chip>
-          
+
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
             Discutons de votre projet
           </h2>
-          
+
           <p className="text-lg text-default-600 max-w-xl mx-auto">
-            Prenez rendez-vous pour une consultation gratuite de 30 minutes ou contactez-nous directement.
+            Prenez rendez-vous pour une consultation gratuite de 30 minutes ou envoyez-nous
+            directement votre demande.
           </p>
         </div>
 
@@ -75,35 +85,38 @@ export default function ContactUs() {
             <Card className="border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]">
               <CardBody className="p-6">
                 <h3 className="font-bold text-lg mb-6">Contact direct</h3>
-                
+
                 <div className="space-y-4">
                   <Button
+                    onClick={handleWhatsAppClick}
                     className="w-full justify-start bg-gradient-to-r from-green-500 to-green-600 text-white"
                     startContent={<WhatsAppIcon className="w-5 h-5" />}
                     variant="shadow"
-                    onClick={handleWhatsAppClick}
                   >
                     WhatsApp
+                    <span className="ml-auto text-xs opacity-90">Message pré-rempli</span>
                   </Button>
-                  
+
                   <Button
+                    onClick={handlePhoneClick}
                     color="primary"
                     variant="shadow"
                     className="w-full justify-start"
                     startContent={<PhoneIcon className="w-5 h-5" />}
-                    onClick={handlePhoneClick}
                   >
                     Appeler
+                    <span className="ml-auto text-xs opacity-90">{contactInfo.phone}</span>
                   </Button>
-                  
+
                   <Button
+                    onClick={handleEmailClick}
                     color="warning"
                     variant="shadow"
                     className="w-full justify-start"
                     startContent={<MailIcon className="w-5 h-5" />}
-                    onClick={handleEmailClick}
                   >
                     Email
+                    <span className="ml-auto text-xs opacity-90">{contactInfo.email}</span>
                   </Button>
                 </div>
 
@@ -116,14 +129,23 @@ export default function ContactUs() {
                       <p className="text-default-500 text-sm">9h00 - 18h00</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center gap-3">
                     <MapPinIcon className="w-5 h-5 text-primary" />
                     <div>
                       <p className="font-medium">Localisation</p>
                       <p className="text-default-500 text-sm">Paris, France</p>
-                      <p className="text-default-500 text-xs">Service international disponible</p>
+                      <p className="text-default-500 text-xs">
+                        Service international disponible
+                      </p>
                     </div>
+                  </div>
+
+                  {/* Response Time */}
+                  <div className="mt-4 p-3 bg-primary/5 rounded-lg">
+                    <p className="text-sm text-default-700">
+                      <strong>✅ Réponse garantie</strong> dans les 24 heures
+                    </p>
                   </div>
                 </div>
               </CardBody>
@@ -159,7 +181,7 @@ export default function ContactUs() {
                       variant="bordered"
                       name="name"
                     />
-                    
+
                     <Input
                       isRequired
                       type="email"
@@ -192,13 +214,27 @@ export default function ContactUs() {
                     variant="bordered"
                     name="projectType"
                   >
-                    <SelectItem key="logo" value="logo">Logo & Identité visuelle</SelectItem>
-                    <SelectItem key="ui-ux" value="ui-ux">Design UI/UX</SelectItem>
-                    <SelectItem key="website" value="website">Site web</SelectItem>
-                    <SelectItem key="ecommerce" value="ecommerce">E-commerce</SelectItem>
-                    <SelectItem key="branding" value="branding">Branding complet</SelectItem>
-                    <SelectItem key="consultation" value="consultation">Consultation seulement</SelectItem>
-                    <SelectItem key="other" value="other">Autre</SelectItem>
+                    <SelectItem key="logo" value="logo">
+                      Logo & Identité visuelle
+                    </SelectItem>
+                    <SelectItem key="ui-ux" value="ui-ux">
+                      Design UI/UX
+                    </SelectItem>
+                    <SelectItem key="website" value="website">
+                      Site web
+                    </SelectItem>
+                    <SelectItem key="ecommerce" value="ecommerce">
+                      E-commerce
+                    </SelectItem>
+                    <SelectItem key="branding" value="branding">
+                      Branding complet
+                    </SelectItem>
+                    <SelectItem key="consultation" value="consultation">
+                      Consultation seulement
+                    </SelectItem>
+                    <SelectItem key="other" value="other">
+                      Autre
+                    </SelectItem>
                   </Select>
 
                   <Textarea
@@ -221,22 +257,24 @@ export default function ContactUs() {
                     >
                       Envoyer la demande
                     </Button>
-                    
+
                     <Button
+                      onClick={handleCallRequest}
                       color="secondary"
                       variant="flat"
                       className="flex-1 py-6"
                       startContent={<PhoneIcon className="w-4 h-4" />}
-                      onClick={handleCallRequest}
                     >
                       Programmer un appel
                     </Button>
                   </div>
 
                   <p className="text-default-500 text-sm text-center">
-                    En soumettant ce formulaire, vous acceptez notre{' '}
-                    <Link href="https://aftgroup.org/politiques" className="text-primary">politique de confidentialité</Link>.
-                    Nous ne partagerons jamais vos informations avec des tiers.
+                    En soumettant ce formulaire, vous acceptez notre{" "}
+                    <Link href="/privacy" className="text-primary">
+                      politique de confidentialité
+                    </Link>
+                    . Nous ne partagerons jamais vos informations avec des tiers.
                   </p>
                 </form>
               </CardBody>
@@ -248,8 +286,9 @@ export default function ContactUs() {
             <div className="mt-6 p-4 bg-default-100 rounded-lg">
               <h4 className="font-bold mb-2">🕐 Consultation gratuite</h4>
               <p className="text-sm text-default-600">
-                Réservez un créneau de 30 minutes pour discuter de votre projet sans engagement.
-                Nous répondons à toutes vos questions et vous proposons une solution adaptée.
+                Réservez un créneau de 30 minutes pour discuter de votre projet sans
+                engagement. Nous répondons à toutes vos questions et vous proposons une
+                solution adaptée.
               </p>
             </div>
           </div>

@@ -1,6 +1,6 @@
-import {IconSvgProps} from "@/types";
+import { IconSvgProps } from "@/types";
 
-export const CLILinearIcon = ({...props}: IconSvgProps) => (
+export const CLILinearIcon = ({ ...props }: IconSvgProps) => (
   <svg
     aria-hidden="true"
     fill="none"

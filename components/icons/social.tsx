@@ -1,8 +1,13 @@
 import React from "react";
 
-import {IconSvgProps} from "@/types";
+import { IconSvgProps } from "@/types";
 
-const OpenCollectiveIcon: React.FC<IconSvgProps> = ({size = 24, width, height, ...props}) => {
+const OpenCollectiveIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => {
   return (
     <svg
       fill="none"
@@ -12,7 +17,12 @@ const OpenCollectiveIcon: React.FC<IconSvgProps> = ({size = 24, width, height, .
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g clipPath="url(#a)" clipRule="evenodd" fill="currentColor" fillRule="evenodd">
+      <g
+        clipPath="url(#a)"
+        clipRule="evenodd"
+        fill="currentColor"
+        fillRule="evenodd"
+      >
         <path d="M21.865 5.166A11.945 11.945 0 0 1 24 12.001c0 2.54-.789 4.895-2.135 6.834l-3.109-3.109A7.679 7.679 0 0 0 19.714 12a7.679 7.679 0 0 0-.958-3.725l3.109-3.109Z" />
         <path d="m18.834 2.135-3.108 3.109a7.714 7.714 0 1 0 0 13.513l3.108 3.108A11.946 11.946 0 0 1 12 24C5.373 24 0 18.627 0 12S5.373 0 12 0c2.54 0 4.895.789 6.834 2.135Z" />
       </g>
@@ -25,7 +35,12 @@ const OpenCollectiveIcon: React.FC<IconSvgProps> = ({size = 24, width, height, .
   );
 };
 
-const PatreonIcon: React.FC<IconSvgProps> = ({size = 24, width, height, ...props}) => {
+const PatreonIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => {
   return (
     <svg
       fill="none"
@@ -47,9 +62,19 @@ const PatreonIcon: React.FC<IconSvgProps> = ({size = 24, width, height, ...props
   );
 };
 
-const DiscordIcon: React.FC<IconSvgProps> = ({size = 24, width, height, ...props}) => {
+const DiscordIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => {
   return (
-    <svg height={size || height} viewBox="0 0 24 24" width={size || width} {...props}>
+    <svg
+      height={size || height}
+      viewBox="0 0 24 24"
+      width={size || width}
+      {...props}
+    >
       <path
         d="M14.82 4.26a10.14 10.14 0 0 0-.53 1.1 14.66 14.66 0 0 0-4.58 0 10.14 10.14 0 0 0-.53-1.1 16 16 0 0 0-4.13 1.3 17.33 17.33 0 0 0-3 11.59 16.6 16.6 0 0 0 5.07 2.59A12.89 12.89 0 0 0 8.23 18a9.65 9.65 0 0 1-1.71-.83 3.39 3.39 0 0 0 .42-.33 11.66 11.66 0 0 0 10.12 0q.21.18.42.33a10.84 10.84 0 0 1-1.71.84 12.41 12.41 0 0 0 1.08 1.78 16.44 16.44 0 0 0 5.06-2.59 17.22 17.22 0 0 0-3-11.59 16.09 16.09 0 0 0-4.09-1.35zM8.68 14.81a1.94 1.94 0 0 1-1.8-2 1.93 1.93 0 0 1 1.8-2 1.93 1.93 0 0 1 1.8 2 1.93 1.93 0 0 1-1.8 2zm6.64 0a1.94 1.94 0 0 1-1.8-2 1.93 1.93 0 0 1 1.8-2 1.92 1.92 0 0 1 1.8 2 1.92 1.92 0 0 1-1.8 2z"
         fill="currentColor"
@@ -58,9 +83,19 @@ const DiscordIcon: React.FC<IconSvgProps> = ({size = 24, width, height, ...props
   );
 };
 
-const TwitterIcon: React.FC<IconSvgProps> = ({size = 24, width, height, ...props}) => {
+const TwitterIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => {
   return (
-    <svg height={size || height} viewBox="0 0 24 24" width={size || width} {...props}>
+    <svg
+      height={size || height}
+      viewBox="0 0 24 24"
+      width={size || width}
+      {...props}
+    >
       <path
         d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"
         fill="currentColor"
@@ -69,9 +104,19 @@ const TwitterIcon: React.FC<IconSvgProps> = ({size = 24, width, height, ...props
   );
 };
 
-const GithubIcon: React.FC<IconSvgProps> = ({size = 24, width, height, ...props}) => {
+const GithubIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => {
   return (
-    <svg height={size || height} viewBox="0 0 24 24" width={size || width} {...props}>
+    <svg
+      height={size || height}
+      viewBox="0 0 24 24"
+      width={size || width}
+      {...props}
+    >
       <path
         clipRule="evenodd"
         d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"
@@ -82,7 +127,12 @@ const GithubIcon: React.FC<IconSvgProps> = ({size = 24, width, height, ...props}
   );
 };
 
-const NextJsIcon: React.FC<IconSvgProps> = ({size = 24, width, height, ...props}) => {
+const NextJsIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => {
   return (
     <svg
       aria-hidden="true"
@@ -99,7 +149,11 @@ const NextJsIcon: React.FC<IconSvgProps> = ({size = 24, width, height, ...props}
   );
 };
 
-const NpmIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...props}) => {
+const NpmIcon: React.FC<IconSvgProps> = ({
+  width = "1em",
+  height = "1em",
+  ...props
+}) => {
   return (
     <svg
       aria-hidden="true"
@@ -118,7 +172,11 @@ const NpmIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...prop
   );
 };
 
-const NpmSmallIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...props}) => {
+const NpmSmallIcon: React.FC<IconSvgProps> = ({
+  width = "1em",
+  height = "1em",
+  ...props
+}) => {
   return (
     <svg
       fill="currentColor"
@@ -136,7 +194,11 @@ const NpmSmallIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ..
 };
 
 // #E1251B
-export const AdobeIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...props}) => {
+export const AdobeIcon: React.FC<IconSvgProps> = ({
+  width = "1em",
+  height = "1em",
+  ...props
+}) => {
   return (
     <svg
       aria-hidden="true"
@@ -155,7 +217,11 @@ export const AdobeIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em"
   );
 };
 
-const YarnIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...props}) => {
+const YarnIcon: React.FC<IconSvgProps> = ({
+  width = "1em",
+  height = "1em",
+  ...props
+}) => {
   return (
     <svg
       aria-hidden="true"
@@ -173,7 +239,11 @@ const YarnIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...pro
   );
 };
 
-const PnpmIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...props}) => {
+const PnpmIcon: React.FC<IconSvgProps> = ({
+  width = "1em",
+  height = "1em",
+  ...props
+}) => {
   return (
     <svg
       aria-hidden="true"
@@ -193,9 +263,20 @@ const PnpmIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...pro
   );
 };
 
-const AstroIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...props}) => {
+const AstroIcon: React.FC<IconSvgProps> = ({
+  width = "1em",
+  height = "1em",
+  ...props
+}) => {
   return (
-    <svg aria-hidden="true" fill="none" focusable="false" height={height} width={width} {...props}>
+    <svg
+      aria-hidden="true"
+      fill="none"
+      focusable="false"
+      height={height}
+      width={width}
+      {...props}
+    >
       <path
         clipRule="evenodd"
         d="M16.986 23.22c-3.498 0-6.986 1.694-6.986 1.694s5.924-16.1 5.937-16.131c.181-.476.457-.783.844-.783h7.11c.386 0 .673.307.843.783l5.936 16.131s-2.843-1.695-6.985-1.695l-2.637-8.14c-.1-.395-.387-.662-.713-.662-.325 0-.614.268-.712.661l-2.637 8.141zm-.572 6.477h.001-.001zM15.3 24.378c-.532 1.751-.16 4.168 1.115 5.319l.017-.061a1.42 1.42 0 00.03-.116c.16-.73.762-1.195 1.524-1.173.741.021 1.135.392 1.25 1.22.042.307.046.62.05.933l.001.098c.01.707.195 1.361.585 1.952a3.4 3.4 0 001.515 1.279l-.018-.06a4.332 4.332 0 00-.03-.1c-.488-1.476-.137-2.49 1.16-3.356l.398-.261c.293-.19.585-.38.867-.586 1.022-.747 1.665-1.732 1.817-3.007a3.404 3.404 0 00-.162-1.547c-.076.045-.148.09-.218.134-.15.094-.29.182-.437.253-1.897.921-3.902 1.035-5.944.73-1.322-.197-2.599-.547-3.52-1.651z"
@@ -206,9 +287,19 @@ const AstroIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...pr
   );
 };
 
-const BunIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...props}) => {
+const BunIcon: React.FC<IconSvgProps> = ({
+  width = "1em",
+  height = "1em",
+  ...props
+}) => {
   return (
-    <svg aria-hidden="true" height={height} viewBox="0 0 32 32" width={width} {...props}>
+    <svg
+      aria-hidden="true"
+      height={height}
+      viewBox="0 0 32 32"
+      width={width}
+      {...props}
+    >
       <path
         d="M29 17c0 5.65-5.82 10.23-13 10.23S3 22.61 3 17c0-3.5 2.24-6.6 5.66-8.44S14.21 4.81 16 4.81s3.32 1.54 7.34 3.71C26.76 10.36 29 13.46 29 17"
         fill="#fbf0df"
@@ -244,9 +335,20 @@ const BunIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...prop
   );
 };
 
-const NewNextJSIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...props}) => {
+const NewNextJSIcon: React.FC<IconSvgProps> = ({
+  width = "1em",
+  height = "1em",
+  ...props
+}) => {
   return (
-    <svg aria-hidden="true" fill="none" focusable="false" height={height} width={width} {...props}>
+    <svg
+      aria-hidden="true"
+      fill="none"
+      focusable="false"
+      height={height}
+      width={width}
+      {...props}
+    >
       <mask
         height="26"
         id="nextjs-white_svg__a"
@@ -274,7 +376,10 @@ const NewNextJSIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", .
           d="M28.596 29.753L16.987 14.8H14.8v10.396h1.75v-8.174l10.672 13.789c.482-.322.94-.676 1.374-1.058z"
           fill="url(#nextjs-white_svg__b)"
         />
-        <path d="M25.344 14.8h-1.733v10.4h1.733V14.8z" fill="url(#nextjs-white_svg__c)" />
+        <path
+          d="M25.344 14.8h-1.733v10.4h1.733V14.8z"
+          fill="url(#nextjs-white_svg__c)"
+        />
       </g>
       <defs>
         <linearGradient
@@ -304,7 +409,11 @@ const NewNextJSIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", .
   );
 };
 
-const RemixIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...props}) => {
+const RemixIcon: React.FC<IconSvgProps> = ({
+  width = "1em",
+  height = "1em",
+  ...props
+}) => {
   return (
     <svg
       aria-hidden="true"
@@ -327,7 +436,11 @@ const RemixIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...pr
   );
 };
 
-const ViteIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...props}) => {
+const ViteIcon: React.FC<IconSvgProps> = ({
+  width = "1em",
+  height = "1em",
+  ...props
+}) => {
   return (
     <svg
       aria-hidden="true"
@@ -375,7 +488,11 @@ const ViteIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...pro
   );
 };
 
-const StorybookIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...props}) => {
+const StorybookIcon: React.FC<IconSvgProps> = ({
+  width = "1em",
+  height = "1em",
+  ...props
+}) => {
   return (
     <svg
       aria-hidden="true"
@@ -396,7 +513,11 @@ const StorybookIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", .
   );
 };
 
-const CodeSandboxIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...props}) => {
+const CodeSandboxIcon: React.FC<IconSvgProps> = ({
+  width = "1em",
+  height = "1em",
+  ...props
+}) => {
   return (
     <svg
       fill="none"
@@ -423,7 +544,11 @@ const CodeSandboxIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em",
   );
 };
 
-const JavascriptIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...props}) => {
+const JavascriptIcon: React.FC<IconSvgProps> = ({
+  width = "1em",
+  height = "1em",
+  ...props
+}) => {
   return (
     <svg
       fill="currentColor"
@@ -438,7 +563,11 @@ const JavascriptIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", 
   );
 };
 
-const TypescriptIcon: React.FC<IconSvgProps> = ({width = "1em", height = "1em", ...props}) => {
+const TypescriptIcon: React.FC<IconSvgProps> = ({
+  width = "1em",
+  height = "1em",
+  ...props
+}) => {
   return (
     <svg
       fill="currentColor"

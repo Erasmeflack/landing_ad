@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+
 import { WarningTriangleIcon } from "@/components/icons";
 
 export default function Problem() {
@@ -15,41 +16,41 @@ export default function Problem() {
         </h1>
         <ul className="mt-6 space-y-4 text-gray-600 dark:text-gray-300 text-left">
           <li className="flex items-start gap-3">
-            <WarningTriangleIcon 
-              className="text-yellow-500 mt-1 flex-shrink-0" 
-              size={20} 
+            <WarningTriangleIcon
+              className="text-yellow-500 mt-1 flex-shrink-0"
+              size={20}
             />
             <span>Votre site est dépassé ou peu professionnel</span>
           </li>
           <li className="flex items-start gap-3">
-            <WarningTriangleIcon 
-              className="text-yellow-500 mt-1 flex-shrink-0" 
-              size={20} 
+            <WarningTriangleIcon
+              className="text-yellow-500 mt-1 flex-shrink-0"
+              size={20}
             />
             <span>Les clients ont du mal à naviguer ou à vous contacter</span>
           </li>
           <li className="flex items-start gap-3">
-            <WarningTriangleIcon 
-              className="text-yellow-500 mt-1 flex-shrink-0" 
-              size={20} 
+            <WarningTriangleIcon
+              className="text-yellow-500 mt-1 flex-shrink-0"
+              size={20}
             />
             <span>Votre branding est incohérent</span>
           </li>
           <li className="flex items-start gap-3">
-            <WarningTriangleIcon 
-              className="text-yellow-500 mt-1 flex-shrink-0" 
-              size={20} 
+            <WarningTriangleIcon
+              className="text-yellow-500 mt-1 flex-shrink-0"
+              size={20}
             />
             <span>Votre site est lent ou non responsive</span>
           </li>
           <li className="flex items-start gap-3">
-            <WarningTriangleIcon 
-              className="text-yellow-500 mt-1 flex-shrink-0" 
-              size={20} 
+            <WarningTriangleIcon
+              className="text-yellow-500 mt-1 flex-shrink-0"
+              size={20}
             />
             <span>
-              Vous avez essayé des freelances mais la qualité n&apos;était pas au
-              rendez-vous
+              Vous avez essayé des freelances mais la qualité n&apos;était pas
+              au rendez-vous
             </span>
           </li>
         </ul>

@@ -42,7 +42,6 @@ export const FeaturesGrid: React.FC<FeaturesGridProps> = ({
   classNames,
   ...props
 }) => {
-
   const slots = styles();
 
   return (

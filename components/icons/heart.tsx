@@ -1,6 +1,11 @@
-import {IconSvgProps} from "@/types";
+import { IconSvgProps } from "@/types";
 
-export const HeartFilledIcon = ({size = 24, width, height, ...props}: IconSvgProps) => (
+export const HeartFilledIcon = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}: IconSvgProps) => (
   <svg
     aria-hidden="true"
     focusable="false"

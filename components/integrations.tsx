@@ -6,7 +6,7 @@ function Integrations() {
   return (
     <div className="flex-col justify-center items-center mx-auto relative text-center py-10">
       <div className="flex justify-center items-center text-cente mb-2">
-        <Chip variant="flat" color="secondary">
+        <Chip color="secondary" variant="flat">
           Integrations
         </Chip>
       </div>
