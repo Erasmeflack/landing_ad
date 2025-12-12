@@ -140,13 +140,6 @@ export default function ContactUs() {
                       </p>
                     </div>
                   </div>
-
-                  {/* Response Time */}
-                  <div className="mt-4 p-3 bg-primary/5 rounded-lg">
-                    <p className="text-sm text-default-700">
-                      <strong>✅ Réponse garantie</strong> dans les 24 heures
-                    </p>
-                  </div>
                 </div>
               </CardBody>
             </Card>
